@@ -50,9 +50,9 @@ https://apidata.fin2dev.com/v1/macrocalendar
 | `date_from`           | date   | Start date for the requested period                               |
 | `date_to`             | date   | End date for the requested period                                 |
 
-* Required parameter
+**\*** Required parameter
 
-** Use either `country` or `iso_country_code` to select a country or region.
+**\*\*** Use either `country` or `iso_country_code` to select a country or region.
 
 Use `date` to retrieve events for a specific day, or `date_from` and `date_to` to retrieve events for a date range.
 
