@@ -148,15 +148,15 @@ pre {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  color: #555;
+  color: #5fae98;
 }
 
 .github-link:visited {
-  color: #555;
+  color: #5fae98;
 }
 
 .github-link:hover {
-  color: #222;
+  color: #478f7c;
   text-decoration: underline;
 }
 
