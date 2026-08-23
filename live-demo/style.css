@@ -140,13 +140,24 @@ pre {
 }
 
 .demo-header h1 {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .github-link {
   white-space: nowrap;
   font-size: 14px;
   font-weight: 600;
+  text-decoration: none;
+  color: #555;
+}
+
+.github-link:visited {
+  color: #555;
+}
+
+.github-link:hover {
+  color: #222;
+  text-decoration: underline;
 }
 
 
