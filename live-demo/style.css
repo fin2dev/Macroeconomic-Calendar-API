@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1d1d1f;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 38px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 38px;
+}
+
+h2 {
+  margin-top: 26px;
+  margin-bottom: 16px;
+  font-size: 30px;
+}
+
+.description {
+  margin-bottom: 24px;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #444;
+}
+
+label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ccd4df;
+  border-radius: 9px;
+  background: #ffffff;
+  font-size: 18px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #78C2AD;
+  outline-offset: 1px;
+}
+
+.date-section {
+  margin-top: 6px;
+}
+
+.date-range {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.or {
+  margin: 20px 0 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #777;
+}
+
+#getDataBtn,
+#copyUrlBtn {
+  border: 0;
+  border-radius: 9px;
+  background: #78C2AD;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#getDataBtn {
+  margin-top: 28px;
+  padding: 14px 28px;
+}
+
+#copyUrlBtn {
+  flex: 0 0 auto;
+  padding: 12px 24px;
+}
+
+#getDataBtn:hover,
+#copyUrlBtn:hover {
+  opacity: 0.9;
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.url-box {
+  margin-top: 24px;
+}
+
+.url-row {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.request-url {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #ccd4df;
+  border-radius: 9px;
+  background: #f3f5f8;
+  color: #444;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  user-select: text;
+}
+
+pre {
+  min-height: 220px;
+  padding: 24px;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: #101827;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+a {
+  color: #5b1791;
+}
+
+@media (max-width: 700px) {
+
+  body {
+    padding: 20px 10px;
+  }
+
+  .container {
+    padding: 24px 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .date-range {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .url-row {
+    flex-direction: column;
+  }
+
+  #copyUrlBtn {
+    width: 100%;
+  }
+}
