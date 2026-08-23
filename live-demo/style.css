@@ -122,6 +122,16 @@ pre {
   min-height: 120px;
 }
 
+.pro-note {
+  margin: 8px 0 4px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.pro-note code {
+  font-size: 13px;
+}
 
 /* Mobile */
 
