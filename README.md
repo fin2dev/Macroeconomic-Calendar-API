@@ -41,13 +41,15 @@ https://apidata.fin2dev.com/v1/macrocalendar
 
 ## Parameters
 
-| Parameter   | Type   | Description                                      |
-| ----------- | ------ | ------------------------------------------------ |
-| `key`       | string | Your API key                                     |
-| `country`   | string | Country or region used to filter economic events |
-| `date`      | date   | Retrieve economic events for a specific date     |
-| `date_from` | date   | Start date for the requested period              |
-| `date_to`   | date   | End date for the requested period                |
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `key` * | string | Your API key |
+| `country` * | string | Country or region used to filter economic events |
+| `date` | date | Retrieve economic events for a specific date |
+| `date_from` | date | Start date for the requested period |
+| `date_to` | date | End date for the requested period |
+
+\* Required parameters
 
 Use `date` to retrieve events for a specific day, or `date_from` and `date_to` to retrieve events for a date range.
 
@@ -276,4 +278,3 @@ If you have any questions about the API, pricing, data coverage or integration, 
 * Developer-friendly integration
 * Fast onboarding
 * Transparent pricing
-
