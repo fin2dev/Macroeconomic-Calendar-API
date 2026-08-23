@@ -41,24 +41,37 @@ https://apidata.fin2dev.com/v1/macrocalendar
 
 ## Parameters
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `key` * | string | Your API key |
-| `country` * | string | Country or region used to filter economic events |
-| `date` | date | Retrieve economic events for a specific date |
-| `date_from` | date | Start date for the requested period |
-| `date_to` | date | End date for the requested period |
+| Parameter             | Type   | Description                                                       |
+| --------------------- | ------ | ----------------------------------------------------------------- |
+| `key` *               | string | Your API key                                                      |
+| `country` **          | string | Country or region used to filter economic events                  |
+| `iso_country_code` ** | string | ISO country code used to filter economic events, for example `us` |
+| `date`                | date   | Retrieve economic events for a specific date                      |
+| `date_from`           | date   | Start date for the requested period                               |
+| `date_to`             | date   | End date for the requested period                                 |
 
-\* Required parameters
+* Required parameter
+
+** Use either `country` or `iso_country_code` to select a country or region.
 
 Use `date` to retrieve events for a specific day, or `date_from` and `date_to` to retrieve events for a date range.
 
 The maximum interval between `date_from` and `date_to` is 90 days.
 
+You can also filter calendar events using the `iso_country_code` parameter.
+
 ## Example Request
+
+Using the country name:
 
 ```text
 https://apidata.fin2dev.com/v1/macrocalendar?key=YOUR_API_KEY&country=United_States
+```
+
+Using the ISO country code:
+
+```text
+https://apidata.fin2dev.com/v1/macrocalendar?key=YOUR_API_KEY&iso_country_code=us
 ```
 
 ## Example Response
@@ -100,10 +113,16 @@ https://apidata.fin2dev.com/v1/macrocalendar?key=YOUR_API_KEY&country=United_Sta
 
 Use the `date` parameter to retrieve economic calendar events for a specific date.
 
-**Example Request**
+**Using country name:**
 
 ```text
 https://apidata.fin2dev.com/v1/macrocalendar?key=YOUR_API_KEY&country=United_States&date=2026-08-24
+```
+
+**Using ISO country code:**
+
+```text
+https://apidata.fin2dev.com/v1/macrocalendar?key=YOUR_API_KEY&iso_country_code=us&date=2026-08-24
 ```
 
 **Example Response**
@@ -161,6 +180,12 @@ Use `date_from` and `date_to` to retrieve economic calendar events for a specifi
 
 ```text
 https://apidata.fin2dev.com/v1/macrocalendar?key=YOUR_API_KEY&country=United_States&date_from=2026-08-24&date_to=2026-08-28
+```
+
+The same request can also be made using `iso_country_code`:
+
+```text
+https://apidata.fin2dev.com/v1/macrocalendar?key=YOUR_API_KEY&iso_country_code=us&date_from=2026-08-24&date_to=2026-08-28
 ```
 
 A single request can retrieve a date range of up to 90 days.
@@ -232,6 +257,16 @@ fetch(
 ```
 
 </details>
+
+## Supported Countries
+
+Use the following endpoint to retrieve the list of countries and regions supported by the Macroeconomic Calendar API.
+
+```text
+https://apidata.fin2dev.com/v1/macrolist?key=YOUR_API_KEY&list=country
+```
+
+The returned country names can be used with the `country` parameter in Macroeconomic Calendar API requests.
 
 ## Use Cases
 
