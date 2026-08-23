@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Macroeconomic Calendar API Demo | Fin2Dev</title>
+
+  <link rel="icon" href="https://fin2dev.com/wp-content/uploads/2025/10/F2D_512x512.png">
+  <link rel="stylesheet" href="style.css?v=20260823-1">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Macroeconomic Calendar API Demo</h1>
+
+  <p class="description">
+    Test the Fin2Dev Macroeconomic Calendar API directly from your browser.<br>
+    Enter your API key, select a country and optionally specify a date or date range.
+  </p>
+
+  <label for="apiKey">API Key *</label>
+  <input type="text" id="apiKey" placeholder="Enter your API key">
+
+  <label for="country">Country *</label>
+  <select id="country">
+    <option value="us">United States</option>
+    <option value="eu">Euro Area</option>
+    <option value="gb">United Kingdom</option>
+    <option value="de">Germany</option>
+    <option value="fr">France</option>
+    <option value="jp">Japan</option>
+    <option value="ca">Canada</option>
+    <option value="au">Australia</option>
+  </select>
+
+  <div class="date-section">
+
+    <label for="date">Specific Date</label>
+    <input type="date" id="date">
+
+    <div class="or">OR</div>
+
+    <div class="date-range">
+
+      <div>
+        <label for="dateFrom">Date From</label>
+        <input type="date" id="dateFrom">
+      </div>
+
+      <div>
+        <label for="dateTo">Date To</label>
+        <input type="date" id="dateTo">
+      </div>
+
+    </div>
+
+  </div>
+
+  <button id="getDataBtn">Get Data</button>
+
+  <p class="note">
+    Don't have an API key?
+    <a href="https://fin2dev.com/pricing/" target="_blank" rel="noopener">
+      Get API access here
+    </a>.
+  </p>
+
+  <div class="url-box">
+
+    <label>Request URL</label>
+
+    <div class="url-row">
+
+      <div id="requestUrl" class="request-url">
+        Request URL will appear here
+      </div>
+
+      <button id="copyUrlBtn" type="button">
+        Copy URL
+      </button>
+
+    </div>
+
+  </div>
+
+  <h2>API Response</h2>
+
+  <pre id="responseBox">Response will appear here...</pre>
+
+</div>
+
+<script src="app.js?v=20260823-1"></script>
+
+</body>
+</html>
