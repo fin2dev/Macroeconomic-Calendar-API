@@ -108,6 +108,13 @@ https://apidata.fin2dev.com/v1/macrocalendar?key=YOUR_API_KEY&iso_country_code=u
   }
 }
 ```
+## Live Demo
+
+Try the Macroeconomic Calendar API directly in your browser.
+
+🚀 [Try Macroeconomic Calendar API Demo](https://fin2dev.github.io/Macroeconomic-Calendar-API/live-demo/)
+
+Enter your API key, select a country and optionally specify a date or date range to view the JSON response.
 
 ## Specific Date Example
 
